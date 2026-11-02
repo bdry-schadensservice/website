@@ -1,0 +1,237 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+const pageTitle = 'Impressum';
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <BaseHead
+      title={`Impressum | ${SITE_TITLE}`}
+      description="Impressum und Anbieterkennzeichnung von bdry Schadensservice."
+    />
+  </head>
+  <body>
+    <Header />
+
+    <main class="imprint-page">
+      <section class="imprint-hero">
+        <div class="imprint-container">
+          <span class="imprint-eyebrow">Rechtliche Informationen</span>
+          <h1>Impressum</h1>
+          <p>
+            Angaben gemäß den gesetzlichen Informationspflichten.
+          </p>
+        </div>
+      </section>
+
+      <section class="imprint-content">
+        <div class="imprint-container">
+          <article class="imprint-section">
+            <h2>Angaben gemäß § 5 DDG</h2>
+
+            <p>
+              <strong>Becker Haus & Garten</strong><br />
+              Markus Becker<br />
+              Schwabenstraße 5b<br />
+              86825 Bad Wörishofen<br />
+              Deutschland
+            </p>
+          </article>
+
+          <article class="imprint-section">
+            <h2>Kontakt</h2>
+
+            <p>
+              Telefon: <a href="tel:[TELEFONNUMMER]">0172 831 6942</a><br />
+              E-Mail:
+              <a href="mailto:[E-MAIL-ADRESSE]">info@bdry-schadensservice.de</a>
+            </p>
+          </article>
+
+          <article class="imprint-section">
+            <h2>Unternehmensangaben</h2>
+
+            <p>
+              Rechtsform: Einzelunternehmen<br />
+              Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:
+              DE366187153<br />
+
+            </p>
+
+
+          </article>
+
+          <article class="imprint-section">
+            <h2>Verantwortlich für den Inhalt</h2>
+
+            <p>
+              Markus Becker<br />
+              Schwabenstraße 5b<br />
+              86825 Bad Wörishofen<br />
+              Deutschland
+            </p>
+          </article>
+
+          <article class="imprint-section">
+            <h2>Verbraucherstreitbeilegung</h2>
+
+            <p>
+              Wir sind weder verpflichtet noch bereit, an einem
+              Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+              teilzunehmen.
+            </p>
+          </article>
+
+          <article class="imprint-section">
+            <h2>Haftung für Inhalte</h2>
+
+            <p>
+              Wir bemühen uns, die Inhalte dieser Website aktuell und korrekt
+              zu halten. Für die Richtigkeit, Vollständigkeit und Aktualität
+              der bereitgestellten Inhalte übernehmen wir jedoch keine Gewähr,
+              soweit gesetzlich zulässig.
+            </p>
+          </article>
+
+          <article class="imprint-section">
+            <h2>Haftung für externe Links</h2>
+
+            <p>
+              Diese Website kann Links zu externen Websites Dritter enthalten.
+              Auf deren Inhalte haben wir keinen Einfluss. Für die Inhalte
+              verlinkter Seiten ist stets der jeweilige Anbieter oder Betreiber
+              verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden
+              entsprechende Links im Rahmen der gesetzlichen Pflichten geprüft
+              und gegebenenfalls entfernt.
+            </p>
+          </article>
+
+          <article class="imprint-section">
+            <h2>Urheberrecht</h2>
+
+            <p>
+              Die auf dieser Website veröffentlichten Inhalte und Werke
+              unterliegen dem deutschen Urheberrecht, soweit sie nicht
+              ausdrücklich anders gekennzeichnet sind. Eine Verwertung
+              außerhalb der gesetzlichen Grenzen bedarf der vorherigen
+              Zustimmung der jeweiligen Rechteinhaber.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .imprint-page {
+    color: #334155;
+    background: #ffffff;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+  }
+
+  .imprint-container {
+    width: min(100% - 40px, 1000px);
+    margin-inline: auto;
+  }
+
+  .imprint-hero {
+    padding: 76px 0 64px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .imprint-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #0284c7;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .imprint-hero h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.15;
+  }
+
+  .imprint-hero p {
+    margin: 18px 0 0;
+    color: #64748b;
+    font-size: 1.08rem;
+    line-height: 1.7;
+  }
+
+  .imprint-content {
+    padding: 56px 0 84px;
+  }
+
+  .imprint-section {
+    padding: 0 0 30px;
+    margin: 0 0 30px;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .imprint-section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .imprint-section h2 {
+    margin: 0 0 14px;
+    color: #0f172a;
+    font-size: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .imprint-section p {
+    margin: 0 0 14px;
+    font-size: 1rem;
+    line-height: 1.85;
+    overflow-wrap: anywhere;
+  }
+
+  .imprint-section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .imprint-section a {
+    color: #0369a1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .imprint-section a:hover {
+    color: #0284c7;
+  }
+
+  @media (max-width: 600px) {
+    .imprint-container {
+      width: min(100% - 32px, 1000px);
+    }
+
+    .imprint-hero {
+      padding: 52px 0 44px;
+    }
+
+    .imprint-content {
+      padding: 40px 0 56px;
+    }
+
+    .imprint-section {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+  }
+</style>

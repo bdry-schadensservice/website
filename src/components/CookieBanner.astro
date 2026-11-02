@@ -1,0 +1,204 @@
+
+<div
+  id="bdry-cookie-banner"
+  class="bdry-cookie-banner"
+  role="dialog"
+  aria-label="Cookie-Einstellungen"
+  aria-describedby="bdry-cookie-description"
+  hidden
+>
+  <div class="bdry-cookie-content">
+    <div class="bdry-cookie-text">
+      <h2>Ihre Privatsphäre</h2>
+      <p id="bdry-cookie-description">
+        Wir verwenden technisch notwendige Funktionen, damit diese Website
+        zuverlässig funktioniert. Mit Ihrer Zustimmung können wir außerdem
+        optionale Dienste verwenden. Sie können Ihre Auswahl jederzeit ändern.
+        Weitere Informationen finden Sie in unserer
+        <a href="/datenschutz/">Datenschutzerklärung</a>.
+      </p>
+    </div>
+
+    <div class="bdry-cookie-actions">
+      <button
+        type="button"
+        class="bdry-cookie-button bdry-cookie-necessary"
+        data-cookie-choice="necessary"
+      >
+        Nur notwendige
+      </button>
+
+      <button
+        type="button"
+        class="bdry-cookie-button bdry-cookie-accept"
+        data-cookie-choice="all"
+      >
+        Alle akzeptieren
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const banner = document.querySelector<HTMLElement>("#bdry-cookie-banner");
+
+  if (banner) {
+    const storageKey = "bdry-cookie-consent";
+
+    try {
+      if (!localStorage.getItem(storageKey)) {
+        banner.hidden = false;
+      }
+    } catch {
+      // Bei blockiertem localStorage bleibt das Banner sichtbar.
+      banner.hidden = false;
+    }
+
+    banner.querySelectorAll<HTMLButtonElement>("[data-cookie-choice]")
+      .forEach((button) => {
+        button.addEventListener("click", () => {
+          const choice = button.dataset.cookieChoice;
+
+          try {
+            localStorage.setItem(
+              storageKey,
+              JSON.stringify({
+                necessary: true,
+                optional: choice === "all",
+                date: new Date().toISOString(),
+              }),
+            );
+
+            banner.hidden = true;
+          } catch {
+            // Ohne Speichermöglichkeit kann die Auswahl
+            // nicht dauerhaft gespeichert werden.
+            banner.hidden = true;
+          }
+        });
+      });
+  }
+</script>
+
+<style>
+  .bdry-cookie-banner[hidden] {
+    display: none;
+  }
+
+  .bdry-cookie-banner {
+    position: fixed;
+    z-index: 10000;
+    right: 24px;
+    bottom: 24px;
+    left: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 12px 40px rgb(15 23 42 / 16%);
+    color: #374151;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+  }
+
+  .bdry-cookie-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+  }
+
+  .bdry-cookie-text {
+    flex: 1;
+  }
+
+  .bdry-cookie-text h2 {
+    margin: 0 0 8px;
+    color: #1f2937;
+    font-size: 1.15rem;
+  }
+
+  .bdry-cookie-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  .bdry-cookie-text a {
+    color: #0284c7;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .bdry-cookie-actions {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 10px;
+    min-width: 165px;
+  }
+
+  .bdry-cookie-button {
+    min-height: 42px;
+    padding: 10px 16px;
+    border: 1px solid #0284c7;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .bdry-cookie-accept {
+    background: #0284c7;
+    color: #ffffff;
+  }
+
+  .bdry-cookie-accept:hover {
+    background: #0369a1;
+  }
+
+  .bdry-cookie-necessary {
+    background: #ffffff;
+    color: #0369a1;
+  }
+
+  .bdry-cookie-necessary:hover {
+    background: #f0f9ff;
+  }
+
+  .bdry-cookie-button:focus-visible {
+    outline: 3px solid #7dd3fc;
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 650px) {
+    .bdry-cookie-banner {
+      right: 12px;
+      bottom: 12px;
+      left: 12px;
+      padding: 20px;
+    }
+
+    .bdry-cookie-content {
+      align-items: stretch;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .bdry-cookie-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-width: 0;
+    }
+
+    .bdry-cookie-button {
+      padding: 10px 8px;
+      font-size: 0.82rem;
+    }
+  }
+</style>

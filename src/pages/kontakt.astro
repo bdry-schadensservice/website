@@ -1,0 +1,609 @@
+
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+
+// Kontaktdaten
+const phoneNumber = '0172 831 6942';
+const displayPhoneNumber = '0172 831 6942';
+const whatsappNumber = '491728316942';
+const emailAddress = 'info@bdry-schadensservice.de';
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <BaseHead
+      title={`Kontakt | ${SITE_TITLE}`}
+      description="Kontaktieren Sie bdry Schadensservice telefonisch, per WhatsApp, per E-Mail oder über unser Kontaktformular."
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="contact-page">
+      <section class="contact-hero">
+        <div class="contact-container">
+          <span class="contact-eyebrow">Kontakt</span>
+          <h1>Wir sind für Sie da.</h1>
+          <p>
+            Sie haben einen Wasserschaden, benötigen eine Leckortung oder
+            möchten sich zur Bautrocknung beraten lassen? Kontaktieren Sie uns.
+            Wir besprechen mit Ihnen die nächsten Schritte.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-options">
+        <div class="contact-container">
+          <div class="contact-options-grid">
+            <!-- Telefon -->
+            <a
+              class="contact-card"
+              href={`tel:${phoneNumber}`}
+              aria-label={`bdry Schadensservice anrufen: ${displayPhoneNumber}`}
+            >
+              <span class="contact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72c.12.96.36 1.9.7 2.79a2 2 0 0 1-.45 2.11L8.06 8.94a16 16 0 0 0 6 6l1.32-1.27a2 2 0 0 1 2.11-.45c.89.34 1.83.58 2.79.7A2 2 0 0 1 22 16.92Z"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <h2>Telefon</h2>
+              <p>{displayPhoneNumber}</p>
+              <span class="contact-card-link">Jetzt anrufen →</span>
+            </a>
+
+            <!-- WhatsApp -->
+            <a
+              class="contact-card"
+              href={`https://wa.me/${whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="bdry Schadensservice über WhatsApp kontaktieren"
+            >
+              <span class="contact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L0 24l6.5-1.7a11.9 11.9 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4ZM12.1 21.7a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.9 1 1-3.8-.3-.4a9.8 9.8 0 1 1 8.6 4.8Z"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M8.5 7.5c-.3.3-.8 1-.8 1.8 0 1.3 1 2.8 2.3 4.1 1.3 1.3 2.8 2.2 4.1 2.3.8 0 1.5-.5 1.8-.8l.4-.9-2.3-1.1-.8 1a7.5 7.5 0 0 1-2.7-2.7l1-.8-1.1-2.3-.9.4Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <h2>WhatsApp</h2>
+              <p>Schreiben Sie uns direkt.</p>
+              <span class="contact-card-link">Chat starten →</span>
+            </a>
+
+            <!-- E-Mail -->
+            <a
+              class="contact-card"
+              href={`mailto:${emailAddress}`}
+              aria-label={`E-Mail an ${emailAddress} senden`}
+            >
+              <span class="contact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <rect
+                    x="3"
+                    y="5"
+                    width="18"
+                    height="14"
+                    rx="2"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                  />
+                  <path
+                    d="m4 7 8 6 8-6"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <h2>E-Mail</h2>
+              <p>{emailAddress}</p>
+              <span class="contact-card-link">E-Mail schreiben →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Kontaktformular -->
+      <section class="contact-form-section">
+        <div class="contact-container contact-form-layout">
+          <div class="contact-form-intro">
+            <span class="contact-eyebrow">Kontaktformular</span>
+            <h2>Wie können wir Ihnen helfen?</h2>
+            <p>
+              Beschreiben Sie kurz Ihr Anliegen. Wir nutzen Ihre Angaben,
+              um Ihre Anfrage zu bearbeiten und Sie gegebenenfalls zu
+              kontaktieren.
+            </p>
+            <p class="contact-required-note">
+              Felder mit * sind Pflichtfelder.
+            </p>
+          </div>
+
+          <form
+            class="contact-form"
+            action={`https://formsubmit.co/${emailAddress}`}
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Neue Kontaktanfrage – bdry Schadensservice"
+            />
+            <input type="hidden" name="_template" value="table" />
+
+            <!-- Honeypot als einfacher Spam-Schutz -->
+            <input
+              type="text"
+              name="_honey"
+              class="contact-honeypot"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+
+            <div class="contact-form-row">
+              <div class="contact-field">
+                <label for="contact-name">Name *</label>
+                <input
+                  id="contact-name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  placeholder="Ihr Name"
+                  required
+                  maxlength="100"
+                />
+              </div>
+
+              <div class="contact-field">
+                <label for="contact-email">E-Mail-Adresse *</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="name@beispiel.de"
+                  required
+                  maxlength="254"
+                />
+              </div>
+            </div>
+
+            <div class="contact-form-row">
+              <div class="contact-field">
+                <label for="contact-phone">Telefon (optional)</label>
+                <input
+                  id="contact-phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  placeholder="Ihre Telefonnummer"
+                  maxlength="40"
+                />
+              </div>
+
+              <div class="contact-field">
+                <label for="contact-topic">Worum geht es? *</label>
+                <select id="contact-topic" name="topic" required>
+                  <option value="" disabled selected>Bitte auswählen</option>
+                  <option value="Leckortung">Leckortung</option>
+                  <option value="Bautrocknung">Technische Bautrocknung</option>
+                  <option value="Schadensservice">
+                    Schadensservice &amp; Versicherung
+                  </option>
+                  <option value="Schimmel">
+                    Schimmelpilzsanierung &amp; Prävention
+                  </option>
+                  <option value="Sonstiges">Sonstiges Anliegen</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="contact-field">
+              <label for="contact-message">Ihre Nachricht *</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="6"
+                placeholder="Beschreiben Sie kurz Ihr Anliegen ..."
+                required
+                minlength="10"
+                maxlength="5000"
+              ></textarea>
+            </div>
+
+            <label class="contact-privacy">
+              <input type="checkbox" name="privacy_acknowledged" value="yes" required />
+              <span>
+                Ich habe die
+                <a href="/datenschutz/">Datenschutzerklärung</a>
+                zur Kenntnis genommen. *
+              </span>
+            </label>
+
+            <button class="contact-submit" type="submit">
+              Anfrage senden 
+            </button>
+
+            <p class="contact-form-note">
+              Bitte übermitteln Sie über dieses Formular keine Passwörter
+              oder sonstigen vertraulichen Zugangsdaten.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .contact-page {
+    color: #374151;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+  }
+
+  .contact-container {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+  }
+
+  .contact-hero {
+    padding: 72px 0 64px;
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .contact-hero .contact-container {
+    max-width: 850px;
+  }
+
+  .contact-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: #0284c7;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .contact-hero h1 {
+    margin: 0 0 18px;
+    color: #1f2937;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.15;
+  }
+
+  .contact-hero p {
+    max-width: 740px;
+    margin: 0;
+    color: #4b5563;
+    font-size: 1.08rem;
+    line-height: 1.8;
+  }
+
+  .contact-options {
+    padding: 48px 0;
+    background: #ffffff;
+  }
+
+  .contact-options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .contact-card {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+    color: inherit;
+    text-decoration: none;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .contact-card:hover {
+    transform: translateY(-3px);
+    border-color: #bae6fd;
+    box-shadow: 0 10px 28px rgb(15 23 42 / 6%);
+  }
+
+  .contact-card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #f0f9ff;
+    color: #0284c7;
+  }
+
+  .contact-card-icon svg {
+    width: 27px;
+    height: 27px;
+  }
+
+  .contact-card h2 {
+    margin: 0 0 8px;
+    color: #1f2937;
+    font-size: 1.2rem;
+  }
+
+  .contact-card p {
+    overflow-wrap: anywhere;
+    margin: 0 0 18px;
+    color: #4b5563;
+    font-size: 0.93rem;
+    line-height: 1.6;
+  }
+
+  .contact-card-link {
+    margin-top: auto;
+    color: #0284c7;
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+
+  .contact-form-section {
+    padding: 76px 0 88px;
+    background: #f8fafc;
+    border-top: 1px solid #e5e7eb;
+  }
+
+  .contact-form-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: 64px;
+  }
+
+  .contact-form-intro h2 {
+    margin: 0 0 18px;
+    color: #1f2937;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    line-height: 1.25;
+  }
+
+  .contact-form-intro p {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .contact-form-intro .contact-required-note {
+    margin-top: 24px;
+    font-size: 0.88rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgb(15 23 42 / 4%);
+  }
+
+  .contact-form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .contact-field {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-field label {
+    color: #374151;
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+
+  .contact-field input,
+  .contact-field select,
+  .contact-field textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #1f2937;
+    font: inherit;
+    font-size: 0.94rem;
+  }
+
+  .contact-field textarea {
+    min-height: 150px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  .contact-field input::placeholder,
+  .contact-field textarea::placeholder {
+    color: #9ca3af;
+  }
+
+  .contact-field input:focus,
+  .contact-field select:focus,
+  .contact-field textarea:focus {
+    outline: 2px solid #7dd3fc;
+    outline-offset: 2px;
+    border-color: #0284c7;
+  }
+
+  .contact-privacy {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: #4b5563;
+    font-size: 0.88rem;
+    line-height: 1.65;
+  }
+
+  .contact-privacy input {
+    flex: 0 0 auto;
+    width: 17px;
+    height: 17px;
+    margin-top: 3px;
+    accent-color: #0284c7;
+  }
+
+  .contact-privacy a {
+    color: #0284c7;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 13px 22px;
+    border: 1px solid #0284c7;
+    border-radius: 6px;
+    background: #0284c7;
+    color: #ffffff;
+    font: inherit;
+    font-size: 0.96rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+
+  .contact-submit:hover {
+    border-color: #0369a1;
+    background: #0369a1;
+  }
+
+  .contact-form-note {
+    margin: -4px 0 0;
+    color: #6b7280;
+    font-size: 0.8rem;
+    line-height: 1.6;
+  }
+
+  .contact-honeypot {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 850px) {
+    .contact-options-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+      display: grid;
+      grid-template-columns: 54px minmax(0, 1fr);
+      column-gap: 16px;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .contact-card-icon {
+      grid-row: span 3;
+      margin: 0;
+    }
+
+    .contact-card h2,
+    .contact-card p,
+    .contact-card-link {
+      grid-column: 2;
+    }
+
+    .contact-card h2 {
+      margin-bottom: 4px;
+    }
+
+    .contact-card p {
+      margin-bottom: 8px;
+    }
+
+    .contact-form-layout {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .contact-form-intro {
+      max-width: 650px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .contact-container {
+      width: calc(100% - 36px);
+    }
+
+    .contact-hero {
+      padding: 52px 0;
+    }
+
+    .contact-options {
+      padding: 28px 0;
+    }
+
+    .contact-form-section {
+      padding: 56px 0;
+    }
+
+    .contact-form {
+      padding: 20px;
+    }
+
+    .contact-form-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .contact-card,
+    .contact-submit {
+      transition: none;
+    }
+  }
+</style>

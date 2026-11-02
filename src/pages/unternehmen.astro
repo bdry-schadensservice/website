@@ -1,0 +1,559 @@
+
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <BaseHead
+      title={`Über bdry Schadensservice | ${SITE_TITLE}`}
+      description="Lernen Sie bdry Schadensservice kennen – Ihr inhabergeführter Spezialbetrieb für Leckageortung, Wasserschadensanierung und Bautrocknung."
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="company-page">
+		<div style="width: 100%; background-color: #ffffff; display: flex; justify-content: center; align-items: center; padding: 20px 0;">
+			<img
+			  src="/logo_full.png"
+			  alt="bdry Schadensservice"
+			  fetchpriority="high"
+			  style="display: block; width: 220px; max-width: 80%; height: auto;"
+			/>
+		  </div>
+
+
+      <section class="company-hero">
+        <div class="company-container">
+          <span class="company-eyebrow">
+            Inhabergeführt &amp; TÜV-sachkundig
+          </span>
+
+          <h1>Über bdry Schadensservice</h1>
+
+          <p class="company-hero-text">
+            Wir stehen für fachkundige Unterstützung bei Wasserschäden,
+            präzise Leckageortung und professionelle Bautrocknung.
+            Persönliche Beratung und moderne Messtechnik bilden die
+            Grundlage unserer Arbeit.
+          </p>
+        </div>
+      </section>
+
+      <section class="company-section">
+        <div class="company-container company-intro-grid">
+          <div>
+            <span class="company-eyebrow">Wer wir sind</span>
+
+            <h2>Persönliche Beratung trifft moderne Messtechnik</h2>
+
+            <p>
+              Als inhabergeführter Spezialbetrieb legen wir Wert auf
+              direkte Ansprechpartner, nachvollziehbare Abläufe und
+              fachgerechte Lösungen. Unser Ziel ist es, Schäden
+              zuverlässig zu lokalisieren und die notwendigen Maßnahmen
+              verständlich zu erklären.
+            </p>
+
+            <p>
+              Dabei verbinden wir praktische Erfahrung mit modernen
+              technischen Verfahren – von der ersten Schadensanalyse
+              bis zur Dokumentation.
+            </p>
+          </div>
+
+          <div class="company-features">
+            <div class="company-feature">
+              <span class="company-check" aria-hidden="true">✓</span>
+              <span>TÜV-sachkundige Expertise</span>
+            </div>
+
+            <div class="company-feature">
+              <span class="company-check" aria-hidden="true">✓</span>
+              <span>Inhabergeführter Betrieb</span>
+            </div>
+
+            <div class="company-feature">
+              <span class="company-check" aria-hidden="true">✓</span>
+              <span>Zerstörungsarme Verfahren</span>
+            </div>
+
+            <div class="company-feature">
+              <span class="company-check" aria-hidden="true">✓</span>
+              <span>Unterstützung aus einer Hand</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+
+      <section class="company-values">
+        <div class="company-container">
+          <div class="company-section-heading">
+            <span class="company-eyebrow">Unser Anspruch</span>
+            <h2>Darauf können Sie sich verlassen</h2>
+          </div>
+
+          <div class="company-card-grid">
+            <article class="company-card">
+              <div class="company-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3 4.5 6v5.5c0 4.7 3.2 7.8 7.5 9.5 4.3-1.7 7.5-4.8 7.5-9.5V6L12 3Z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+
+              <h3>Qualität &amp; Fachwissen</h3>
+              <p>
+                Fachgerechtes Arbeiten, sachkundige Einschätzung und
+                moderne Messverfahren stehen bei uns im Mittelpunkt.
+              </p>
+            </article>
+
+            <article class="company-card">
+              <div class="company-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="10" cy="7" r="4" />
+                  <path d="M20 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+
+              <h3>Persönliche Betreuung</h3>
+              <p>
+                Direkte Ansprechpartner und verständliche Kommunikation
+                sorgen für klare Abläufe während des gesamten Auftrags.
+              </p>
+            </article>
+
+            <article class="company-card">
+              <div class="company-card-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
+                  <path d="M14 2v6h6" />
+                  <path d="M8 13h8" />
+                  <path d="M8 17h8" />
+                  <path d="M8 9h2" />
+                </svg>
+              </div>
+
+              <h3>Transparente Dokumentation</h3>
+              <p>
+                Wir legen Wert auf nachvollziehbare Ergebnisse und eine
+                verständliche Dokumentation der durchgeführten Arbeiten.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-owner">
+        <div class="company-container company-owner-grid">
+          <div class="company-owner-image">
+            <img
+              src="/Markus_Becker.jpg"
+              alt="Inhaber von bdry Schadensservice"
+              loading="lazy"
+              width="520"
+              height="620"
+            />
+          </div>
+      
+          <div class="company-owner-content">
+            <span class="company-eyebrow">Persönlich für Sie da</span>
+      
+            <h2>Ein persönliches Wort des Inhabers</h2>
+      
+            <p>
+              Bei einem Wasser- oder Feuchtigkeitsschaden ist es wichtig,
+              einen Ansprechpartner zu haben, der die Situation versteht
+              und sich persönlich um das Anliegen kümmert.
+            </p>
+      
+            <p>
+              Mir ist es wichtig, Schäden sorgfältig zu untersuchen,
+              Ergebnisse verständlich zu erklären und gemeinsam mit
+              meinen Kunden die passenden nächsten Schritte zu finden.
+              Dabei stehen fachgerechte Arbeit, transparente Kommunikation
+              und persönliche Betreuung für mich an erster Stelle.
+            </p>
+      
+            <p>
+              Vielen Dank für Ihr Vertrauen.
+            </p>
+      
+            <p class="company-owner-signature">
+              <strong>Markus Becker</strong>
+              <span>Inhaber · bdry Schadensservice</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="company-cta">
+        <div class="company-container company-cta-inner">
+          <div>
+            <h2>Benötigen Sie fachkundige Unterstützung?</h2>
+            <p>
+              Wir helfen Ihnen bei Fragen zu Leckageortung,
+              Wasserschadensanierung und Bautrocknung gerne weiter.
+            </p>
+          </div>
+
+          <a class="company-cta-button" href="/kontakt">
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .company-page {
+    --company-blue: #0284c7;
+    --company-blue-dark: #0369a1;
+    --company-text: #1f2937;
+    --company-muted: #5b6472;
+    --company-border: #e5e7eb;
+    --company-light: #f8fafc;
+
+    color: var(--company-text);
+    font-family: "Trebuchet MS", Arial, sans-serif;
+  }
+
+  .company-container {
+    width: min(1120px, calc(100% - 40px));
+    margin-inline: auto;
+  }
+
+  .company-hero {
+    padding: 88px 0 82px;
+    background: var(--company-light);
+    border-bottom: 1px solid var(--company-border);
+  }
+
+  .company-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--company-blue-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .company-hero h1 {
+    max-width: 780px;
+    margin: 0 0 22px;
+    font-size: clamp(2.3rem, 5vw, 3.7rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+  }
+
+  .company-hero-text {
+    max-width: 720px;
+    margin: 0;
+    color: var(--company-muted);
+    font-size: 1.12rem;
+    line-height: 1.8;
+  }
+
+  .company-section {
+    padding: 84px 0;
+  }
+
+  .company-intro-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 64px;
+    align-items: center;
+  }
+
+  .company-page h2 {
+    margin: 0 0 22px;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  .company-page p {
+    color: var(--company-muted);
+    line-height: 1.8;
+  }
+
+  .company-intro-grid p {
+    margin: 0 0 18px;
+  }
+
+  .company-features {
+    display: grid;
+    padding: 12px 24px;
+    border: 1px solid var(--company-border);
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .company-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 0;
+    font-weight: 600;
+  }
+
+  .company-feature + .company-feature {
+    border-top: 1px solid var(--company-border);
+  }
+
+  .company-check {
+    display: grid;
+    flex: 0 0 25px;
+    width: 25px;
+    height: 25px;
+    place-items: center;
+    border-radius: 50%;
+    background: #e0f2fe;
+    color: var(--company-blue-dark);
+    font-weight: 700;
+  }
+
+  .company-values {
+    padding: 82px 0 90px;
+    background: var(--company-light);
+    border-top: 1px solid var(--company-border);
+    border-bottom: 1px solid var(--company-border);
+  }
+
+  .company-section-heading {
+    max-width: 680px;
+    margin: 0 auto 42px;
+    text-align: center;
+  }
+
+  .company-section-heading .company-eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .company-section-heading h2 {
+    margin-bottom: 0;
+  }
+
+  .company-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .company-card {
+    padding: 30px;
+    border: 1px solid var(--company-border);
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  .company-card-icon {
+    display: grid;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 24px;
+    place-items: center;
+    border-radius: 9px;
+    background: #e0f2fe;
+    color: var(--company-blue-dark);
+  }
+
+  .company-card h3 {
+    margin: 0 0 12px;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .company-card p {
+    margin: 0;
+    font-size: 0.97rem;
+  }
+
+  .company-cta {
+    padding: 68px 0;
+  }
+
+  .company-cta-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+  }
+
+  .company-cta h2 {
+    margin-bottom: 12px;
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+  }
+
+  .company-cta p {
+    max-width: 650px;
+    margin: 0;
+  }
+
+  .company-cta-button {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 50px;
+    padding: 0 22px;
+    border-radius: 6px;
+    background: var(--company-blue);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease;
+  }
+
+  .company-cta-button:hover {
+    background: var(--company-blue-dark);
+  }
+
+  .company-owner {
+  padding: 84px 0;
+  background: #ffffff;
+}
+
+.company-owner-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  align-items: center;
+  gap: 64px;
+}
+
+.company-owner-image {
+  overflow: hidden;
+  border-radius: 10px;
+  background: #f1f5f9;
+  aspect-ratio: 5 / 6;
+}
+
+.company-owner-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.company-owner-content h2 {
+  margin-bottom: 22px;
+}
+
+.company-owner-content p {
+  margin: 0 0 18px;
+}
+
+.company-owner-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 28px !important;
+}
+
+.company-owner-signature strong {
+  color: #1f2937;
+  font-size: 1.05rem;
+}
+
+.company-owner-signature span {
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 800px) {
+  .company-owner {
+    padding: 64px 0;
+  }
+
+  .company-owner-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .company-owner-image {
+    width: min(100%, 420px);
+    aspect-ratio: 4 / 3;
+  }
+}
+
+  @media (max-width: 800px) {
+    .company-hero {
+      padding: 66px 0;
+    }
+
+    .company-section {
+      padding: 64px 0;
+    }
+
+    .company-intro-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .company-card-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .company-card {
+      padding: 26px;
+    }
+
+    .company-cta-inner {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .company-container {
+      width: min(100% - 32px, 1120px);
+    }
+
+    .company-hero {
+      padding: 52px 0;
+    }
+
+    .company-hero-text {
+      font-size: 1rem;
+    }
+
+    .company-values {
+      padding: 62px 0;
+    }
+
+    .company-features {
+      padding-inline: 16px;
+    }
+
+    .company-feature {
+      font-size: 0.94rem;
+    }
+
+    .company-cta {
+      padding: 52px 0;
+    }
+
+    .company-cta-button {
+      width: 100%;
+    }
+  }
+</style>

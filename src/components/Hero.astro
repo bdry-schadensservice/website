@@ -1,0 +1,351 @@
+
+<section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">
+          <span class="hero-eyebrow-line"></span>
+          Inhabergeführter Spezialbetrieb
+        </p>
+  
+        <h1>
+          Schnelle Hilfe bei
+          <span>Wasserschäden &amp; Leckagen</span>
+        </h1>
+  
+        <p class="hero-description">
+          Punktgenaue Ortung, professionelle Trocknung und persönliche
+          Betreuung aus einer Hand – sachkundig, zuverlässig und nah.
+        </p>
+  
+        <div class="hero-actions">
+          <a href="/kontakt" class="hero-button hero-button-primary">
+            Kontakt
+          </a>
+  
+          <a href="/leistungen" class="hero-button hero-button-secondary">
+            Unsere Leistungen
+          </a>
+        </div>
+  
+        <div class="hero-trust">
+          <div class="hero-trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M12 3 19 6V11.5C19 16 16 19.5 12 21C8 19.5 5 16 5 11.5V6L12 3Z"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+              />
+              <path
+                d="m9 12 2 2 4-4"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+  
+          <div class="hero-trust-text">
+            <strong>TÜV-sachkundig</strong>
+            <span>Leckageortung &amp; Bautrocknung</span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hero-visual">
+        <img
+          src="/fahrzeug.png"
+          alt="Einsatzfahrzeug von bdry Schadensservice"
+          fetchpriority="high"
+        />
+  
+        <div class="hero-image-caption">
+          <span class="hero-caption-dot"></span>
+          <span>bdry Schadensservice</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .hero-section {
+      background: #ffffff;
+      padding: 76px 0 84px;
+      overflow: hidden;
+    }
+  
+    .hero-container {
+      width: min(1200px, calc(100% - 48px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      align-items: center;
+      gap: 64px;
+    }
+  
+    .hero-content {
+      min-width: 0;
+    }
+  
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 24px;
+      color: #0284c7;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+  
+    .hero-eyebrow-line {
+      width: 28px;
+      height: 2px;
+      background: #0284c7;
+      flex-shrink: 0;
+    }
+  
+    .hero-content h1 {
+      margin: 0;
+      color: #172033;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: clamp(36px, 4.1vw, 54px);
+      font-weight: 700;
+      line-height: 1.13;
+      letter-spacing: -0.035em;
+    }
+  
+    .hero-content h1 span {
+      display: block;
+      margin-top: 5px;
+      color: #0284c7;
+    }
+  
+    .hero-description {
+      max-width: 540px;
+      margin: 24px 0 30px;
+      color: #5b6472;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+  
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+  
+    .hero-button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 0 22px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+    }
+  
+    .hero-button-primary {
+      color: #ffffff;
+      background: #0284c7;
+    }
+  
+    .hero-button-primary:hover {
+      color: #ffffff;
+      background: #0369a1;
+    }
+  
+    .hero-button-primary span {
+      font-size: 19px;
+      line-height: 1;
+    }
+  
+    .hero-button-secondary {
+      color: #263445;
+      background: #ffffff;
+      border-color: #d7dde4;
+    }
+  
+    .hero-button-secondary:hover {
+      color: #0284c7;
+      border-color: #0284c7;
+      background: #f8fcff;
+    }
+  
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-top: 38px;
+      padding-top: 25px;
+      border-top: 1px solid #e9edf1;
+    }
+  
+    .hero-trust-icon {
+      display: flex;
+      width: 42px;
+      height: 42px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: #0284c7;
+      background: #eff8fd;
+      border-radius: 50%;
+    }
+  
+    .hero-trust-icon svg {
+      width: 23px;
+      height: 23px;
+    }
+  
+    .hero-trust-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+  
+    .hero-trust-text strong {
+      color: #263445;
+      font-size: 14px;
+    }
+  
+    .hero-trust-text span {
+      color: #6b7280;
+      font-size: 13px;
+    }
+  
+    .hero-visual {
+      position: relative;
+      min-width: 0;
+    }
+  
+    .hero-visual img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 5 / 4;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #f1f5f9;
+    }
+  
+    .hero-image-caption {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 16px;
+      color: #263445;
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(229, 233, 240, 0.9);
+      border-radius: 5px;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+    }
+  
+    .hero-caption-dot {
+      width: 8px;
+      height: 8px;
+      flex-shrink: 0;
+      background: #0284c7;
+      border-radius: 50%;
+    }
+  
+    .hero-button:focus-visible {
+      outline: 3px solid #0284c7;
+      outline-offset: 4px;
+    }
+  
+    @media (max-width: 900px) {
+      .hero-section {
+        padding: 56px 0 64px;
+      }
+  
+      .hero-container {
+        grid-template-columns: 1fr 0.85fr;
+        gap: 32px;
+      }
+  
+      .hero-content h1 {
+        font-size: clamp(32px, 4.5vw, 44px);
+      }
+  
+      .hero-description {
+        font-size: 16px;
+      }
+  
+      .hero-button {
+        padding: 0 16px;
+      }
+    }
+  
+    @media (max-width: 680px) {
+      .hero-section {
+        padding: 42px 0 48px;
+      }
+  
+      .hero-container {
+        width: calc(100% - 36px);
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+  
+      .hero-eyebrow {
+        margin-bottom: 18px;
+        font-size: 13px;
+      }
+  
+      .hero-content h1 {
+        font-size: clamp(34px, 9vw, 46px);
+        line-height: 1.15;
+      }
+  
+      .hero-description {
+        margin: 20px 0 24px;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+  
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+  
+      .hero-button {
+        width: 100%;
+        min-height: 50px;
+      }
+  
+      .hero-trust {
+        margin-top: 28px;
+        padding-top: 22px;
+      }
+  
+      .hero-visual img {
+        aspect-ratio: 4 / 3;
+      }
+    }
+  
+    @media (prefers-reduced-motion: reduce) {
+      .hero-button {
+        transition: none;
+      }
+    }
+  </style>
+  
