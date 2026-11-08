@@ -407,19 +407,22 @@ import { SITE_TITLE } from '../consts';
 
   .company-cta-button {
     display: inline-flex;
-    flex: 0 0 auto;
+    flex: 0 1 auto;
     align-items: center;
     justify-content: center;
     gap: 12px;
     min-height: 50px;
-    padding: 0 22px;
+    max-width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
     border-radius: 6px;
     background: var(--company-blue);
     color: #fff;
     font-weight: 700;
     text-decoration: none;
+    text-align: center;
     transition: background 0.2s ease;
-  }
+}
 
   .company-cta-button:hover {
     background: var(--company-blue-dark);
@@ -482,21 +485,15 @@ import { SITE_TITLE } from '../consts';
     padding: 64px 0;
   }
 
-    .company-owner-image img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-
   .company-owner-grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 
   .company-owner-image {
-    width: min(100%, 420px);
-    aspect-ratio: 4 / 3;
-  }
+    width: 100%;
+    height: auto;
+
 }
 
   @media (max-width: 800px) {
@@ -527,11 +524,17 @@ import { SITE_TITLE } from '../consts';
       flex-direction: column;
       gap: 24px;
     }
+
+    .company-owner-image img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
   }
 
   @media (max-width: 480px) {
     .company-container {
-      width: min(100% - 32px, 1120px);
+      width: min(100% - 16px, 1120px);
     }
 
     .company-hero {

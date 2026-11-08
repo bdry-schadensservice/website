@@ -142,3 +142,33 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+@media (max-width: 768px) {
+    h1,
+    h2,
+    h3,
+    h4 {
+        word-break: normal;
+        overflow-wrap: normal;
+        hyphens: manual;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: clamp(28px, 8vw, 36px);
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: clamp(24px, 6.5vw, 30px);
+        line-height: 1.25;
+    }
+
+    h3 {
+        font-size: clamp(20px, 5.5vw, 25px);
+        line-height: 1.3;
+    }
+}

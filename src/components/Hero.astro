@@ -322,15 +322,24 @@
         line-height: 1.7;
       }
   
-      .hero-actions {
-        align-items: stretch;
-        flex-direction: column;
-      }
+
   
-      .hero-button {
-        width: 100%;
-        min-height: 50px;
-      }
+      .hero-actions {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    align-items: stretch;
+    flex-direction: column;
+}
+
+.hero-button {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    min-height: 50px;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
   
       .hero-trust {
         margin-top: 28px;
