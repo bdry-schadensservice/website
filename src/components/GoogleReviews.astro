@@ -1,0 +1,152 @@
+---
+import { reviews } from '../data/reviews.js';
+
+const googleUrl = 'https://www.google.com/maps/place//@48.0005797,10.6026261,12z/data=!3m1!4b1!4m3!3m2!1s0x2c8ac84685a5e485:0x7cc73f248798f070!12e1?entry=ttu';
+
+const averageRating = (
+  reviews.reduce((sum, review) => sum + review.rating, 0) /
+  reviews.length
+).toFixed(1).replace('.', ',');
+---
+
+<section class="reviews-section">
+  <div class="reviews-container">
+
+    <div class="reviews-header">
+      <span class="reviews-eyebrow">Kundenstimmen</span>
+      <h2>Das sagen unsere Kunden</h2>
+
+      <div class="reviews-summary">
+
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      {reviews.map((review) => (
+        <article class="reviews-card">
+          <div class="reviews-stars">
+            {'★'.repeat(review.rating)}
+          </div>
+
+          <p>{review.text}</p>
+
+          <div class="reviews-author">
+            <strong>{review.name}</strong>
+            <span>{review.date}</span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="reviews-footer">
+      <a href={googleUrl} target="_blank" rel="noopener noreferrer">
+        Alle Google-Rezensionen ansehen →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .reviews-section {
+    padding: 90px 24px;
+  }
+
+  .reviews-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .reviews-header {
+    text-align: center;
+    margin-bottom: 45px;
+  }
+
+  .reviews-eyebrow {
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  .reviews-header h2 {
+    margin: 12px 0 24px;
+  }
+
+  .reviews-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .reviews-summary strong {
+    font-size: 2.5rem;
+  }
+
+  .reviews-summary span {
+    font-size: 0.85rem;
+    color: #777;
+  }
+
+  .reviews-stars {
+    color: #e6a817;
+    letter-spacing: 2px;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .reviews-card {
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .reviews-card p {
+    line-height: 1.7;
+    margin: 0;
+    flex: 1;
+  }
+
+  .reviews-author {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .reviews-author span {
+    font-size: 0.8rem;
+    color: #777;
+  }
+
+  .reviews-footer {
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .reviews-footer a {
+    color: #0284c7;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .reviews-footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .reviews-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .reviews-section {
+      padding: 60px 20px;
+    }
+  }
+</style>

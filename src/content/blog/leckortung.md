@@ -2,7 +2,7 @@
 title: "Leckortung: Wasserschäden gezielt aufspüren"
 description: "Warum eine professionelle Leckortung hilft, versteckte Wasserlecks schnell und möglichst zerstörungsarm zu lokalisieren."
 pubDate: 2026-10-17
-heroImage: "../../assets/logo_full.png"
+heroImage: "../../assets/leckortung.png"
 ---
 
 

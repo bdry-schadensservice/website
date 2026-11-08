@@ -2,7 +2,7 @@
 title: "Schimmel und Prävention: Feuchtigkeit frühzeitig erkennen"
 description: "Wie Schimmel entsteht, welche Warnsignale wichtig sind und wie eine gezielte Feuchtigkeitsanalyse hilft, Risiken zu reduzieren."
 pubDate: 2026-10-17
-heroImage: "../../assets/logo_full.png"
+heroImage: "../../assets/schimmel.png"
 ---
 
 

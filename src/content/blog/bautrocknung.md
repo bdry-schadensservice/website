@@ -2,7 +2,7 @@
 title: "Technische Bautrocknung: Feuchtigkeit gezielt reduzieren"
 description: "Wie professionelle Bautrocknung die Trocknung nach Wasserschäden unterstützt und hilft, Folgeschäden zu begrenzen."
 pubDate: 2026-10-17
-heroImage: "../../assets/logo_full.png"
+heroImage: "../../assets/bautrocknung.png"
 ---
 
 
